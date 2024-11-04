@@ -1,0 +1,41 @@
+.album-container {
+	width: 100%;
+	overflow-y: scroll;
+	position: relative;
+	cursor: pointer;
+}
+
+.album-scroll {
+	display: flex;
+	animation: scrollAlbum 10s linear infinite;
+}
+
+.album-scroll img {
+	width: 200px; height: auto;
+	margin-right: 10px;
+}
+
+.image-wrapper {
+	display: flex; gap: 10px; overfow-x: scroll;
+	scroll-snap-type: xmandatory; padding-bottom: 10px;
+	cursor: pointer;
+}
+
+@keyframes scrollAlbum {
+	0% {
+	transform: translateX(0);
+}
+	100% {
+	transform: translatex(-100);
+  }
+}
+
+.album-container:hover .album-scroll {
+	animation-play-state: active;
+}
+
+@media (max-width: 600px) {
+	.album-xcroll img {
+	width: 150px;
+  }
+}
